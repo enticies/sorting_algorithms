@@ -6,25 +6,25 @@
 void print_array(int * array, int length);
 void quick_sort(int * array, int low, int high);
 void swap(int * array, int length, int index1, int index2);
-int partition(int * array, int low, int high);
+int partition(int * array, int high);
 
 int main() {
-  int a[] = {-3211231, 3, 2311241, 1000, 1, 1, 1, 1, 32, -55};
+  int a[] = {0, 0, 1, 0, 0};
 
-  quick_sort(a, 0, 9);
+  quick_sort(a, 0, 4);
 
-  print_array(a, 10);
+  print_array(a, 5);
 }
 
 void quick_sort(int * array, int low, int high) {
   if (low < high) {
-    int pivot_index = partition(array, low, high);
+    int pivot_index = partition(array, high);
     quick_sort(array, low, pivot_index - 1);
     quick_sort(array, pivot_index+1, high);
   }
 }
 
-int partition(int * array, int low, int high) {
+int partition(int * array, int high) {
   int pivot_index = high;
   int i = 0;
   int j = -1;
