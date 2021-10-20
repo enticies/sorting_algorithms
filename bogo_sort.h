@@ -1,3 +1,6 @@
+#ifndef _BOGO_SORT_H
+#define _BOGO_SORT_H
+
 #include <sys/time.h>
 #include <stdlib.h>
 
@@ -46,3 +49,4 @@ void shuffle(int *array, size_t n) {
     }
 }
 
+#endif

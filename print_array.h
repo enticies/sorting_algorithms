@@ -1,3 +1,6 @@
+#ifndef _PRINT_ARRAY_H
+#define _PRINT_ARRAY_H
+
 #include <stdio.h>
 
 void print_array(int * a, int length) {
@@ -6,3 +9,5 @@ void print_array(int * a, int length) {
   }
   printf("\n");
 }
+
+#endif
