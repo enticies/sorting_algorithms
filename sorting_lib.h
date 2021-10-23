@@ -3,12 +3,11 @@
 
 #include "auxiliary_functions.h"
 
-int * bogo_sort(int * array, int length) {
+void bogo_sort(int * array, int length) {
   // destroy the universe every iteration
   while (!is_sorted(array, length)) {
     shuffle(array, length);
   }
-  return array;
 }
 
 void quick_sort(int * array, int low, int high) {
