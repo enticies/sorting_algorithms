@@ -48,4 +48,16 @@ void exchange_sort(int * array, int length) {
   }
 }
 
+void selection_sort(int * array, int length) {
+  for (int i = 0; i < length; i++) {
+    int smallest = i;
+    for (int j = i; j < length; j++) {
+      if (array[smallest] > array[j]) {
+        smallest = j;
+      }
+    }
+    swap(array, length, smallest, i);
+  }
+}
+
 #endif
